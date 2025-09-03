@@ -69,13 +69,13 @@ stages:
       size: 91
     - path: src/models/train.py
       hash: md5
-      md5: 67e8fa1c052749b1ee73f85a1feae0c4
-      size: 1002
+      md5: bd2bcca136edfbd127b02206e7599cf8
+      size: 1322
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 443cc87176b6e56d9a9de2d659e2f09d
-      size: 13005889
+      md5: 8844e06888dbd0e2cd2a3ef64662552f
+      size: 8123329
   evaluate:
     cmd: python src/models/evaluate.py --out_dir metrics --pred_path 
       data/predictions.csv
@@ -90,8 +90,8 @@ stages:
       size: 6456
     - path: models/model.pkl
       hash: md5
-      md5: 443cc87176b6e56d9a9de2d659e2f09d
-      size: 13005889
+      md5: 8844e06888dbd0e2cd2a3ef64662552f
+      size: 8123329
     - path: src/models/evaluate.py
       hash: md5
       md5: a0114eeec2942fbfafb7b73c9d2834e1
@@ -99,11 +99,11 @@ stages:
     outs:
     - path: data/predictions.csv
       hash: md5
-      md5: 05548cd043c46edcace414626aa7bdee
-      size: 13178
+      md5: 2af0dad2758505946f2695f7081672eb
+      size: 13210
     - path: metrics/scores.json
       hash: md5
-      md5: f4290691bed07a08aa032621841e9861
+      md5: ed0b322c67856d2bf9c809735bee0a06
       size: 95
   gridsearch:
     cmd: python src/models/grid_search.py
