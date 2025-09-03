@@ -35,3 +35,11 @@ stages:
     - src/models/evaluate.py
     outs:
     - metrics/metrics.json
+  gridsearch:
+    cmd: python src/models/grid_search.py
+    deps:
+    - data/processed/X_train_scaled.csv
+    - data/processed/y_train.csv
+    - src/models/grid_search.py
+    outs:
+    - models/best_params.pkl
