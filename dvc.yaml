@@ -34,7 +34,8 @@ stages:
     - models/model.pkl
     - src/models/evaluate.py
     outs:
-    - metrics/metrics.json
+    - data/predictions.csv
+    - metrics/scores.json
   gridsearch:
     cmd: python src/models/grid_search.py
     deps:
